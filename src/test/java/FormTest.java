@@ -19,7 +19,6 @@ public class FormTest {
     @BeforeAll
     static void setUpAll() {
         WebDriverManager.chromedriver().setup();
-        //System.setProperty("webdriver.chrome.driver", "./driver/mac/chromedriver.exe");
     }
 
     @BeforeEach
