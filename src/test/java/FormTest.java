@@ -37,7 +37,7 @@ public class FormTest {
     }
 
     @Test
-    void shouldTestSomething() throws InterruptedException {
+    void shouldTestSomething()  {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[data-test-id= name] input")).sendKeys("Василий");
         driver.findElement(By.cssSelector("[data-test-id= phone ] input")).sendKeys("+79999999999");
@@ -46,7 +46,7 @@ public class FormTest {
         String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         String actual = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
         assertEquals(expected, actual);
-        Thread.sleep(5000);
+
 
 
 
