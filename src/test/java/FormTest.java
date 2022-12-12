@@ -82,5 +82,16 @@ public class FormTest {
         String actual = driver.findElement(By.cssSelector("[data-test-id= agreement]")).getText().trim();
         assertEquals(expected, actual);
     }
+    //Первый вариант проверки
+    @Test
+    void checkboxInvalidVerification()  {
+        driver.get("http://localhost:9999/");
+        driver.findElement(By.cssSelector("[data-test-id= name] input")).sendKeys("Василий");
+        driver.findElement(By.cssSelector("[data-test-id= phone ] input")).sendKeys("+799999999999");
+        driver.findElement(By.className("button_view_extra")).click();
+        driver.findElement(By.className("input_invalid"));
+    }
+    //Второй вариант проверки
+
 
 }
